@@ -27,29 +27,27 @@ class CustomData:
         sqft_living: int,
         sqft_lot: int,
         floors: float,
-        view: int,
         condition: int,
         grade: int,
         sqft_above: int,
         sqft_basement: int,
         yr_built: int,
         lat: float,
-        long: float
+        longs: float
         ):
 
-        self.bedrooms = bedrooms,
-        self.bathrooms = bathrooms,
-        self.sqft_living = sqft_living,
-        self.sqft_lot = sqft_lot,
-        self.floors = floors,
-        self.view = view,
-        self.condition = condition,
-        self.grade = grade,
-        self.sqft_above = sqft_above,
-        self.sqft_basement = sqft_basement,
-        self.yr_built = yr_built,
-        self.lat = lat,
-        self.long = long
+        self.bedrooms = bedrooms
+        self.bathrooms = bathrooms
+        self.sqft_living = sqft_living
+        self.sqft_lot = sqft_lot
+        self.floors = floors
+        self.condition = condition
+        self.grade = grade
+        self.sqft_above = sqft_above
+        self.sqft_basement = sqft_basement
+        self.yr_built = yr_built
+        self.lat = lat
+        self.longs = longs
 
     def get_data_as_data_frame(self):
         try:
@@ -59,14 +57,13 @@ class CustomData:
                 "sqft_living": [self.sqft_living],
                 "sqft_lot": [self.sqft_lot],
                 "floors": [self.floors],
-                "view": [self.view],
                 "condition": [self.condition],
                 "grade": [self.grade],
                 "sqft_above": [self.sqft_above],
-                "sqft.basement":[self.sqft_basement],
+                "sqft_basement":[self.sqft_basement],
                 "yr_built": [self.yr_built],
                 "lat": [self.lat],
-                "long": [self.long]
+                "longs": [self.longs]
             }
 
             return pd.DataFrame(custom_data_input_dict)
