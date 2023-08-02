@@ -64,3 +64,7 @@ Link : [Model Training Notebook](./notebook/MODEL_TRAINING.ipynb)
 # Docker
 
 Link : https://hub.docker.com/repository/docker/apheiron/house_predict
+
+# Azure
+
+Link : https://apheironhousepredict.azurewebsites.net
